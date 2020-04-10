@@ -1,2 +1,10 @@
 #Pillow==7.0.0
 sudo apt-get install python3-pil python3-pil.imagetk
+#En windows
+instalar anaconda python:
+en una terminal:
+pip install easygui
+pip install opencv-python
+
+conda instal -c anaconda tk
+conda install -c anaconda pillow
