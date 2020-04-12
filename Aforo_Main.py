@@ -1,3 +1,4 @@
+#!/usr/bin/env
 from __future__ import division
 from tkinter import *
 from tkinter import filedialog
@@ -12,9 +13,9 @@ import pickle
 import ntpath
 
 # image sizes for the examples
-SIZE = 500 , 500
+SIZE = 300 , 300
 # regex for graphics file format
-FILES_FORMAT_REGEX = '*.[JjPp]*[Gg]'
+FILES_FORMAT_REGEX = '*.[Jj][Pp][Gg]'
 FILES_FORMAT_CSV = '*.[Cc][Ss][Vv]'
 
 parallelo=0
@@ -682,30 +683,30 @@ class LabelTool:
             
             #Inician preguntas:
             # Es un acceso o una salida
-            accOsal = self.classcandidate_Type.get()
+            accOsal = self.classcandidate_Type.get().rstrip()
             
             if accOsal=="Izquierda-Derecha":
 
-                Acceso = self.classcandidate_Cardinal.get()
-                if Acceso=="Norte":
+                Acceso = self.classcandidate_Cardinal.get().rstrip()
+                if Acceso=="Norte-N":
                     Salida="Sur"
-                elif Acceso=="Sur":
+                elif Acceso=="Sur-S":
                     Salida="Norte"
-                elif Acceso=="Oriente":
+                elif Acceso=="Oriente-E":
                     Salida="Occidente"
-                elif Acceso=="Occidente":
+                elif Acceso=="Occidente-W":
                     Salida="Oriente"
                     
             elif accOsal=="Arriba-Abajo":
 
-                Acceso = self.classcandidate_Cardinal.get()
-                if Acceso=="Norte":
+                Acceso = self.classcandidate_Cardinal.get().rstrip()
+                if Acceso=="Norte-N":
                     Salida="Sur"
-                elif Acceso=="Sur":
+                elif Acceso=="Sur-S":
                     Salida="Norte"
-                elif Acceso=="Oriente":
+                elif Acceso=="Oriente-E":
                     Salida="Occidente"
-                elif Acceso=="Occidente":
+                elif Acceso=="Occidente-W":
                     Salida="Oriente"
 
             
@@ -759,30 +760,30 @@ class LabelTool:
 
             
    
-            accOsal = self.classcandidate_Type.get()
+            accOsal = self.classcandidate_Type.get().rstrip()
             
             if accOsal=="Izquierda-Derecha":
 
-                Acceso = self.classcandidate_Cardinal.get()
-                if Acceso=="Norte":
+                Acceso = self.classcandidate_Cardinal.get().rstrip()
+                if Acceso=="Norte-N":
                     Salida="Sur"
-                elif Acceso=="Sur":
+                elif Acceso=="Sur-S":
                     Salida="Norte"
-                elif Acceso=="Oriente":
+                elif Acceso=="Oriente-E":
                     Salida="Occidente"
-                elif Acceso=="Occidente":
+                elif Acceso=="Occidente-W":
                     Salida="Oriente"
                     
             elif accOsal=="Arriba-Abajo":
 
-                Acceso = self.classcandidate_Cardinal.get()
-                if Acceso=="Norte":
+                Acceso = self.classcandidate_Cardinal.get().rstrip()
+                if Acceso=="Norte-N":
                     Salida="Sur"
-                elif Acceso=="Sur":
+                elif Acceso=="Sur-S":
                     Salida="Norte"
-                elif Acceso=="Oriente":
+                elif Acceso=="Oriente-E":
                     Salida="Occidente"
-                elif Acceso=="Occidente":
+                elif Acceso=="Occidente-W":
                     Salida="Oriente"
 
             
@@ -840,30 +841,31 @@ class LabelTool:
             #Inician preguntas:
             # Es un acceso o una salida
 
-            accOsal = self.classcandidate_Type.get()
-            
-            if accOsal=="Izquierda-Derecha":
-
-                Acceso = self.classcandidate_Cardinal.get()
-                if Acceso=="Norte":
+            accOsal = self.classcandidate_Type.get().rstrip()
+            print (accOsal)
+            if accOsal.rstrip()=="Izquierda-Derecha":
+                print ("es de Izq a derecha")
+                Acceso = self.classcandidate_Cardinal.get().rstrip()
+                if Acceso=="Norte-N":
                     Salida="Sur"
-                elif Acceso=="Sur":
+                elif Acceso=="Sur-S":
                     Salida="Norte"
-                elif Acceso=="Oriente":
+                elif Acceso=="Oriente-E":
                     Salida="Occidente"
-                elif Acceso=="Occidente":
+                elif Acceso=="Occidente-W":
                     Salida="Oriente"
                     
-            elif accOsal=="Arriba-Abajo":
+            elif accOsal.rstrip()=="Arriba-Abajo":
+                print ("es de Arriba-Abajo")
 
-                Acceso = self.classcandidate_Cardinal.get()
-                if Acceso=="Norte":
+                Acceso = self.classcandidate_Cardinal.get().rstrip()
+                if Acceso=="Norte-N":
                     Salida="Sur"
-                elif Acceso=="Sur":
+                elif Acceso=="Sur-S":
                     Salida="Norte"
-                elif Acceso=="Oriente":
+                elif Acceso=="Oriente-E":
                     Salida="Occidente"
-                elif Acceso=="Occidente":
+                elif Acceso=="Occidente-W":
                     Salida="Oriente"
 
             
@@ -886,7 +888,7 @@ class LabelTool:
                     linname=retornarNombreLinea(self.imageDir,lindata[0],self.cur,self.fnlin)
                     #print linname
                     Data1,Data2,Data3=getDataFromFile(linname)# Data1 ambos sentidos Data2 positivo, Data3, Negativo
-                    
+                    print(Salida)
                     self.rp.generar_reporte_linea(str(fieldValues[0]),str(fieldValues[1]),descripcion_via,Acceso,Salida,lindata[3],lindata[2],lindata[1],lindata[4])
                     self.rp.agregarData(Data2)
                 else:
