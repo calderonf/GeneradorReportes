@@ -14,7 +14,7 @@ import ntpath
 # image sizes for the examples
 SIZE = 500 , 500
 # regex for graphics file format
-FILES_FORMAT_REGEX = '*.[JjPp]*[Gg]'
+FILES_FORMAT_REGEX = '*.[Jj][Pp][Gg]'
 FILES_FORMAT_CSV = '*.[Cc][Ss][Vv]'
 
 parallelo=0
@@ -934,7 +934,7 @@ class LabelTool:
 
 
     def create_images_list(self):
-         with open(self.imageDir + 'images_list.txt', 'w') as inFile:
+         with open(self.imageDir + '/images_list.txt', 'w') as inFile:
              for im in self.imageList:
                 inFile.write(im+'\n')
                 
