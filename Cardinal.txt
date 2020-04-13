@@ -1,4 +1,4 @@
-Norte
-Sur
-Oriente
-Occidente
+Norte-N
+Sur-S
+Oriente-E
+Occidente-W

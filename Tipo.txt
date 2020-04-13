@@ -1,2 +1,3 @@
 Izquierda-Derecha
 Arriba-Abajo
+Unidireccional
