@@ -344,8 +344,8 @@ class LabelTool:
         # main panel for labeling
         self.mainPanel = Canvas(self.frame, cursor='tcross')
 
-        self.parent.bind("a", self.prevImage) # press 'a' to go backforward
-        self.parent.bind("d", self.nextImage) # press 'd' to go forward
+        #self.parent.bind("a", self.prevImage) # press 'a' to go backforward
+        #self.parent.bind("d", self.nextImage) # press 'd' to go forward
         self.mainPanel.grid(row = 1, column= 1, rowspan = 4, sticky = W+S)
 
 
